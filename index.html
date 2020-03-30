@@ -39,7 +39,9 @@
       z-index: 201;
       padding-bottom: 0;
       padding-left: 0;
-      filter: blur(10px);
+
+      -webkit-transform: blur(0);
+      -webkit-transition: blur(20px) 10000ms;
 
     }
 
@@ -47,23 +49,21 @@
     .html {
       overflow-x: hidden;
     }
-    
-    
   </style>
 
 </head>
 
 <body class="window">
   <div class="back">
-    <video width="100%" height=auto autoplay loop >
+    <video width="100%" height=auto autoplay loop>
       <source src="/kekandos/video1.mp4" type="video/mp4">
 
 
     </video>
   </div>
-  
-    <img class="avatar" src="/kekandos/me.jpg">
-  
+
+  <img class="avatar" src="/kekandos/me.jpg">
+
   <script src="//megatimer.ru/get/585db2a19c3ae9f25c30d277dfd67259.js"></script>
 </body>
 
