@@ -25,7 +25,8 @@
       left: 0;
       top: 0;
       bottom: 0;
-    }
+    } 
+    
 
     #timer585db2a19c3ae9f25c30d277dfd67259 {
       position: absolute;
@@ -67,7 +68,7 @@
 </head>
 
 <body class="window">
-  <div class="back">
+  <div class="back" onmousemove="biba()">
     <video width="100%" height=auto autoplay loop>
       <source src="/kekandos/video1.mp4" type="video/mp4">
 
@@ -75,28 +76,21 @@
     </video>
   </div>
 
-  <img class="avatar" src="/kekandos/me.jpg" onclick="biba">
+  <img class="avatar" src="/kekandos/me.jpg">
 
   <script src="//megatimer.ru/get/585db2a19c3ae9f25c30d277dfd67259.js"></script>
   <script type="text/javascript">
-    if (check()) {
-      document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").onload = "biba()";
-    };
+  var blured = true;
+  
+   
     function biba() {
+      if (blured) {
       document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0)";
+      blured = false
+      };
     };
-    function check() {
-      var k = true;
-      while (k) {
-        if (document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259") != null) {
-          return true;
-          k = false;
-        } else {
-          setTimeout(null, 200);
-        }
-
-      }
-    }
+    
+    
 
 
 
