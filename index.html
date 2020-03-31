@@ -12,9 +12,9 @@
 
     * {
       margin: 0;
-      
-  transition: 5s filter linear;
-  
+
+      transition: 5s filter linear;
+
 
     }
 
@@ -36,24 +36,26 @@
       z-index: 200;
       color: #f8caca;
       filter: blur(30px);
-      
-      
+
+
     }
-    #timer585db2a19c3ae9f25c30d277dfd67259:hover{
-      filter:blur(5px);
+
+    #timer585db2a19c3ae9f25c30d277dfd67259:hover {
+      filter: blur(5px);
     }
 
     .avatar {
       z-index: 201;
       padding-bottom: 0;
       padding-left: 0;
-      
 
-      
+
+
 
     }
+
     .avatar:hover {
-      filter:blur(5px)
+      filter: blur(5px)
     }
 
 
@@ -77,13 +79,27 @@
 
   <script src="//megatimer.ru/get/585db2a19c3ae9f25c30d277dfd67259.js"></script>
   <script type="text/javascript">
-  document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").onload = "biba()";
-  function biba() {
-    document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0)";
-  
-  }
- 
-    
+    if (check()) {
+      document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").onload = "biba()";
+    };
+    function biba() {
+      document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0)";
+    };
+    function check() {
+      var k = true;
+      while (k) {
+        if (document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259") != null) {
+          return true;
+          k = false;
+        } else {
+          setTimeout(null, 200);
+        }
+
+      }
+    }
+
+
+
   </script>
 </body>
 
