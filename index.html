@@ -68,6 +68,7 @@
       font-family: Comfortaa, Arial, sans-serif;
       font-size: 30px; 
       color: #F3F3F3;
+      filter: blur(30px);
     }
   </style>
 
@@ -98,6 +99,7 @@
     function biba() {
       if (blured) {
       document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0.5px)";
+      document.getElementsByClassName("text").style.filter = "blur(0.5px)";
       blured = false
       };
     };
