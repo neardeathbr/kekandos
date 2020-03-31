@@ -51,6 +51,7 @@
 
     .html {
       overflow-x: hidden;
+      
     }
 
     @font-face {
@@ -72,6 +73,7 @@
       color: #F3F3F3;
       filter: blur(30px);
       text-align: center;
+      text-decoration-line: none;
     }
   </style>
 
@@ -91,7 +93,7 @@
       <br>
       <br>
       <br>
-      <p onclick="click();"><a >&lt;click to read message&gt;</a></p>
+      <a id="read" href="#" >&lt;click to read message&gt;</a>
       
     </div> 
 
@@ -117,6 +119,7 @@
       document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(30px)";
 
     };
+    document.getElementById("read").addEventListener("click", click(), false);
 
 
 
