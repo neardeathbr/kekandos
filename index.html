@@ -81,7 +81,7 @@
 
 
     </video>
-    <div class="text">
+    <div class="text" id="id_text">
       <p>
         It's <span class="ssilka">#notsolong</span> until that day...
       </p>
@@ -99,7 +99,7 @@
     function biba() {
       if (blured) {
       document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0.5px)";
-      document.getElementsByClassName("text").style.filter = "blur(0.5px)";
+      document.getElementById("id_text").style.filter = "blur(0.5px)";
       blured = false
       };
     };
