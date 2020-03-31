@@ -13,7 +13,7 @@
     * {
       margin: 0;
 
-      transition: 5s filter linear;
+      transition: 5s filter ease-out;
 
 
     }
@@ -53,12 +53,14 @@
       overflow-x: hidden;
     }
     .text{
-      position: absolute;
+      position: relative;
       margin: auto;
-      top:30vh;
+      top:10vh;
       z-index: 200;
       left:50%;
-      transform: translate (-50%, -50%);
+      transform: translate(-50%, -50%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 60px;
     }
   </style>
 
@@ -71,12 +73,13 @@
 
 
     </video>
+    <div class="text">
+      <p>
+        It's <span class="ssilka">#notsolong</span> until that day...
+      </p>
+    </div>
   </div>
-  <div class="text">
-    <p>
-      It's <span class="ssilka">#notsolong</span> until that day...
-    </p>
-  </div>
+  
 
   
 
