@@ -35,6 +35,7 @@
       transform: translate(-50%, -50%);
       z-index: 200;
       color: #f8caca;
+      filter: blur(10px);
       
       
     }
@@ -72,12 +73,14 @@
     </video>
   </div>
 
-  <img class="avatar" src="/kekandos/me.jpg">
+  <img class="avatar" src="/kekandos/me.jpg" onclick="biba">
 
   <script src="//megatimer.ru/get/585db2a19c3ae9f25c30d277dfd67259.js"></script>
   <script type="text/javascript">
-  var1 = document.getElementsByClassName(timer585db2a19c3ae9f25c30d277dfd67259);
-  var1.style.filter = blur(20);
+  function biba() {
+    var1 = document.getElementsByClassName(timer585db2a19c3ae9f25c30d277dfd67259);
+  var1.style.filter = blur(0);
+  }
     
   </script>
 </body>
