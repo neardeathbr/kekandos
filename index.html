@@ -52,15 +52,19 @@
     .html {
       overflow-x: hidden;
     }
+    @font-face {
+    font-family: myfont; 
+    src: url("kekandos/font.ttf"); 
+   }
     .text{
-      position: relative;
+      position: absolute;
       margin: auto;
-      top:10vh;
+      top:40vh;
       z-index: 200;
       left:50%;
       transform: translate(-50%, -50%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 60px; 
+      font-family: myfont;
+      font-size: 30px; 
     }
   </style>
 
