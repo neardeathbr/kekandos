@@ -13,7 +13,7 @@
     * {
       margin: 0;
 
-      transition: 5s filter ease-out;
+      transition: 7s filter ease-out;
 
 
     }
@@ -119,11 +119,12 @@
 
 
 
-    <div class="open_message" id="id_open_message">
+    <div class="text" id="id_open_message">
 
-      <a id="read" href="javascript:click();">&lt;click to read message&gt;</a>
+      <a id="read" href="javascript:openMessage();">&lt;click to read message&gt;</a>
     </div>
   </div>
+
 
 
 
@@ -135,21 +136,24 @@
   <script src="//megatimer.ru/get/585db2a19c3ae9f25c30d277dfd67259.js"></script>
   <script type="text/javascript">
     var blured = true;
+    var music_playing = true;
 
 
     function biba() {
       if (blured) {
         document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0.5px)";
-        document.getElementById("id_text").style.filter = "blur(0.5px)";
-        document.getElementById("id_open_message").style.filter = "blur(0.5px)";
+        document.getElementsByClassName("text").style.filter = "blur(0.5px)";
         blured = false
       };
     };
-    function click() {
+    function openMessage() {
       document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(30px)";
 
     };
-    document.getElementById("read").addEventListener("click", click(), false);
+    function musicStatus() {
+
+    }
+
 
 
 
