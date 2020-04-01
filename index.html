@@ -5,6 +5,7 @@
   <title>countdown</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
+  
     ::-webkit-scrollbar {
       width: 0px;
       background: transparent;
@@ -106,7 +107,7 @@
   <audio id ="audio" src="/kekandos/audio1.mp3" type="audio/mp3" autoplay loop></audio>
 
   <div class="back" id="back" onmousemove="biba()">
-  <video id="video" width="100%" height=auto autoplay loop onpause="video_play()">
+  <video id="video" width="100%" height=auto autoplay loop onloadeddata="video_play()">
       <source src="/kekandos/video0.mp4" type="video/mp4">
 
 
