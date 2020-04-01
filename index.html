@@ -103,7 +103,7 @@
 </head>
 
 <body class="window" alink="#800080" vlink="#800080" link="#800080">
-  <audio src="/kekandos/audio1.mp3" type="audio/mp3" autoplay loop></audio>
+  <audio id ="audio" src="/kekandos/audio1.mp3" type="audio/mp3" autoplay loop></audio>
 
   <div class="back" onmousemove="biba()">
     <video width="100%" height=auto autoplay loop>
@@ -122,7 +122,7 @@
 
     <div class="open_message" id="id_open_message">
 
-      <a id="read" href="javascript:openMessage();">&lt;click to read message&gt;</a>
+      <a id="read" href="javascript:musicStatus();">&lt;click to read message&gt;</a>
     </div>
   </div>
 
@@ -143,8 +143,8 @@
     function biba() {
       if (blured) {
         document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0.5px)";
-        document.getElementsByClassName("id_text").style.filter = "blur(0.5px)";
-        document.getElementsByClassName("id_open_message").style.filter = "blur(0.5px)";
+        document.getElementsById("id_text").style.filter = "blur(0.5px)";
+        document.getElementsById("id_open_message").style.filter = "blur(0.5px)";
         blured = false
       };
     };
@@ -153,6 +153,13 @@
 
     };
     function musicStatus() {
+      if(music_playing) {
+        document.getElementById("audio").pause();
+        music_playing=false;
+      } else {
+        document.getElementById("audio").play();
+        music_playing=true;
+      }
 
     }
 
