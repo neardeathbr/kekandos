@@ -106,7 +106,7 @@
   <audio id ="audio" src="/kekandos/audio1.mp3" type="audio/mp3" autoplay loop></audio>
 
   <div class="back" onmousemove="biba()">
-    <video width="100%" height=auto autoplay loop>
+    <video id="video" width="100%" height=auto autoplay loop>
       <source src="/kekandos/video0.mp4" type="video/mp4">
 
 
@@ -140,28 +140,39 @@
   
   <script type="text/javascript">
     var blured = true;
-    var music_playing = true;
+    var audio = document.getElementById("audio");
+    var video = document.getElementById("video");
+    var timer =  document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
+    var text = document.getElementById("id_text");
+    var open_message = document.getElementById("id_open_message");
+
+    if (audio.paused) {
+      audio.play();
+    }
+    if (video.paused) {
+      video.play();
+    }
 
 
     function biba() {
       if (blured) {
-        document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(0.5px)";
-        document.getElementById("id_text").style.filter = "blur(0.5px)";
-        document.getElementById("id_open_message").style.filter = "blur(0.5px)";
+        timer.style.filter = "blur(0.5px)";
+        text.style.filter = "blur(0.5px)";
+        open_message.style.filter = "blur(0.5px)";
         blured = false;
       };
     };
     function openMessage() {
-      document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259").style.filter = "blur(30px)";
+      timer.style.filter = "blur(30px)";
 
     };
     function musicStatus() {
-      if(music_playing) {
-        document.getElementById("audio").pause();
-        music_playing=false;
+      if(document.getElementById("audio").paused) {
+        audio.play();
+        
       } else {
-        document.getElementById("audio").play();
-        music_playing=true;
+        audio.pause();
+      
       }
 
     }
