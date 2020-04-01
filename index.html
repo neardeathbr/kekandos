@@ -147,6 +147,13 @@
     var timer =  document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
+    document.getElementById("back").addEventListener("onmousemove", restart_audio());
+    function restart_audio() {
+      if (audio.paused){
+        audio.play();
+        document.getElementById("back").removeEventListener("onmousemove", restart_audio());
+      }
+    }
     
     
     
