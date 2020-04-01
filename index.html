@@ -106,7 +106,7 @@
   <audio id ="audio" src="/kekandos/audio1.mp3" type="audio/mp3" autoplay loop></audio>
 
   <div class="back" onmousemove="biba()">
-    <video id="video" width="100%" height=auto autoplay loop>
+  <video id="video" width="100%" height=auto autoplay loop onpause="video_play()">
       <source src="/kekandos/video0.mp4" type="video/mp4">
 
 
@@ -145,15 +145,13 @@
     var timer =  document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
-
-    if (audio.paused) {
-      audio.play();
-    }
-    if (video.paused) {
+    function video_play() {
       video.play();
+      audio.play()
     }
+   
 
-
+    
     function biba() {
       if (blured) {
         timer.style.filter = "blur(0.5px)";
