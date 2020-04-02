@@ -103,8 +103,7 @@
 </head>
 
 <body class="window" alink="#800080" vlink="#800080" link="#800080">
-  <iframe hidden src="/kekandos/silence.mp3" allow="autoplay" type="audio/mp3"></iframe>
-  <audio src="/kekandos/audio1.mp3" autoplay></audio>
+  <audio src="/kekandos/audio1.mp3" autoplay muted></audio>
 
   <div class="back" id="back" onmousemove="biba()">
     <video id="video" width="100%" height=auto preload autoplay loop muted>
@@ -147,18 +146,10 @@
     var timer = document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
-    audio.volume = 0.5;
-    function restart_audio() {
-      if (audio.paused) {
-        audio.play();
-
-      }
-    }
-    setTimeout(restart_audio(), 2000);
-    function video_play() {
-      video.play();
-      audio.play();
-    }
+    audio.volume = 0.5; 
+    
+    
+    
 
 
 
