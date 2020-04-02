@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>countdown1</title>
+  <title>countdown</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {
@@ -145,9 +145,11 @@
     var timer = document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
-    video.addEventListener("onplay", function () { while (audio.paused){audio.play();}});
+    
  
-
+function play_audio() {
+  audio.play();
+}
 
    
     
