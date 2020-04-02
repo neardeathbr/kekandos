@@ -146,7 +146,8 @@
     var timer = document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
-    play_audio() {
+    
+    function play_audio() {
       audio.play();
     }
     
@@ -172,7 +173,7 @@
 
     };
     function musicStatus() {
-      if (document.getElementById("audio").paused) {
+      if (document.getElementById("audio").paused) { 
         audio.play();
 
       } else {
