@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>countdown</title>
+  <title>countdown12</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {
@@ -139,6 +139,7 @@
   
 
   <script type="text/javascript">
+  log.text("test");
     var blured = true;
     var audio = document.getElementById("id_audio");
     var video = document.getElementById("video");
@@ -148,6 +149,7 @@
   window.on("load", function () {
     document.getElementById("id_body").trigger("click");
     audio.play();
+    log.text("try to play");
   })
 
     
