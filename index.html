@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>countdown</title>
+  <title>countdown1</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {
@@ -103,7 +103,7 @@
 </head>
 
 <body class="window" alink="#800080" vlink="#800080" link="#800080">
- 
+  <embed name="audio" src="/kekandos/audio1.mp3" loop="true" hidden="true" autostart="true">
   <div class="back" id="back" onmousemove="biba(); play_audio()">
     <video id="video" width="100%" height=auto preload autoplay loop muted>
       <source src="/kekandos/video0.mp4" type="video/mp4">
@@ -145,18 +145,9 @@
     var timer = document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
-    let audioPlaying = true,
-    backgroundAudio, browser;
-browser = navigator.userAgent.toLowerCase();
-$('<audio class="audio1" src="/kekandos/audio1.mp3" loop></audio>').prependTo('body');
-if (!browser.indexOf('firefox') > -1) {
-    $('<embed id="background-audio" src="/kekandos/audio1.mp3" autostart="1"></embed>').prependTo('body');
-    backgroundAudio = setInterval(function() {
-        $("#background-audio").remove();
-        $('<embed id="background-audio" src="/kekandos/audio1.mp3"></embed>').prependTo('body');
-    }, 120000); // 120000 is the duration of your audio which in this case 2 mins.
-}
-    
+ 
+
+
     function play_audio() {
       audio.play();
     }
