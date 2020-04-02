@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>countdown</title>
+  <title>countdown12</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {
@@ -151,7 +151,8 @@
    
    
     function tipa_event() {
-      document.getElementById("id_body").click();
+      document.getElementById("id_window").click();
+      document.getElementById("id_window").trigger("click");
       audio.play();
       console.log("try to play");
     }
