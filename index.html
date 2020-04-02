@@ -147,11 +147,14 @@
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
     var body = document.getElementById("id_window");
-    body.addEventListener("onload",function () {
+    body.addEventListener("onload",tipa_event());
+   
+   
+    function tipa_event() {
       document.getElementById("id_body").trigger("click");
       audio.play();
       console.log("try to play");
-    });
+    }
 
 
 
