@@ -103,8 +103,8 @@
 </head>
 
 <body class="window" alink="#800080" vlink="#800080" link="#800080">
-  <audio id="id_audio" src="/kekandos/audio1.mp3"></audio>
-  <div class="back" id="back" onmousemove="biba(); play_audio()">
+  
+  <div class="back" id="back" onmousemove="biba();">
     <video id="video" width="100%" height=auto preload autoplay loop muted>
       <source src="/kekandos/video0.mp4" type="video/mp4">
 
@@ -147,10 +147,18 @@
     var open_message = document.getElementById("id_open_message");
     
  
-function play_audio() {
-  audio.play();
-}
-video.click();
+
+    var player = new Plyr('#player', { controls: [ 'restart', 'play', 'progress', 'mute', 'volume' ]});
+player.source = {
+	type: "audio",
+	sources: [{
+		src: "/kekandos/audio1.mp3",
+		type: 'audio/mp3'
+	}]
+};
+setTimeout(function() {
+	player.play();
+}, 0);
 
    
     
