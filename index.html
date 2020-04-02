@@ -155,11 +155,12 @@
 
     function biba() {
       if (blured) {
-
+        audio.volume = 0.5; 
         text.style.filter = "blur(0.5px)";
         open_message.style.filter = "blur(0.5px)";
         timer.style.filter = "blur(0.5px)";
         blured = false;
+        document.getElementById("back").removeEventListener("onmousemove", biba());
 
       };
     };
