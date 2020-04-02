@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>countdown</title>
+  <title>countdown12</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {
@@ -103,7 +103,7 @@
 </head>
 
 <body id="id_window" alink="#800080" vlink="#800080" link="#800080">
- <audio src="/kekandos/audio1.mp3" ></audio>
+  <audio src="/kekandos/audio1.mp3"></audio>
   <div class="back" id="back" onmousemove="biba();">
     <video id="video" width="100%" height=auto preload autoplay loop muted>
       <source src="/kekandos/video0.mp4" type="video/mp4">
@@ -136,35 +136,34 @@
 
 
 
-  
+
 
   <script type="text/javascript">
-  console.log("test");
+    console.log("test");
     var blured = true;
     var audio = document.getElementById("id_audio");
     var video = document.getElementById("video");
     var timer = document.getElementById("timer585db2a19c3ae9f25c30d277dfd67259");
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
-  window.on("load", function () {
-    document.getElementById("id_body").trigger("click");
-    audio.play();
-    console.log("try to play");
-    
-  })
+    window.onload(function () {
+      document.getElementById("id_body").trigger("click");
+      audio.play();
+      console.log("try to play");
+    });
 
-    
 
-   
-    
-    
-    
+
+
+
+
+
 
 
 
     function biba() {
       if (blured) {
-        
+
         text.style.filter = "blur(0.5px)";
         open_message.style.filter = "blur(0.5px)";
         timer.style.filter = "blur(0.5px)";
@@ -178,7 +177,7 @@
 
     };
     function musicStatus() {
-      if (document.getElementById("audio").paused) { 
+      if (document.getElementById("audio").paused) {
         audio.play();
 
       } else {
@@ -187,7 +186,7 @@
       }
 
     }
-   
+
 
 
 
