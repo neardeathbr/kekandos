@@ -99,11 +99,21 @@
       text-align: center;
       text-decoration-line: none;
     }
+    #overlay {
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background-color:black;
+      opacity: 0.4;
+    }
   </style>
 
 </head>
 
 <body id="id_window" alink="#800080" vlink="#800080" link="#800080">
+  <div id="overlay">
+
+  </div>
  
 <div class="back" id="back" onmousemove="biba();">
     <video id="video" width="100%" height=auto preload autoplay loop muted>
@@ -178,21 +188,7 @@
     };
     function musicStatus() {
       
-      $(function(){
-   var docHeight = $(document).height();
-   $("body").append("<div id='overlay'></div>");
-   $("#overlay")
-      .height(docHeight)
-      .css({
-         'opacity' : 0.4,
-         'position': 'absolute',
-         'top': 0,
-         'left': 0,
-         'background-color': 'black',
-         'width': '100%',
-         'z-index': 5000
-      });	
-});
+     
     }
 
 
