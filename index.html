@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Обратный отсчёт1</title>
+  <title>Обратный отсчёт</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {   
@@ -13,7 +13,7 @@
     * {
       margin: 0;
 
-      transition: 5s filter ease-out;
+      transition: 1s filter ease-out;
 
 
     }
@@ -37,6 +37,7 @@
 
 
     #timer585db2a19c3ae9f25c30d277dfd67259 {
+      transition: 5s filter ease-out;
       position: absolute;
       margin: auto;
       top: 25vh;
@@ -49,9 +50,7 @@
 
     }
 
-    #timer585db2a19c3ae9f25c30d277dfd67259:hover {
-      filter: blur(5px);
-    }
+    
     
 
 
@@ -71,6 +70,7 @@
     }
 
     .text {
+      transition: 5s filter ease-out;
       position: absolute;
       margin: auto;
       top: 45vh;
@@ -86,6 +86,7 @@
     }
 
     .open_message {
+      transition: 5s filter ease-out;
       position: absolute;
       margin: auto;
       top: 90vh;
@@ -100,6 +101,7 @@
       text-decoration-line: none;
     }
     #overlay {
+      transition: 1s opacity;
       position: fixed;
       height: 100%;
       width: 100%;
@@ -159,6 +161,7 @@
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
     var body = document.getElementById("id_window");
+    var overlay = document.getElementById("overlay");
    
     
    
@@ -188,7 +191,10 @@
 
     };
     function musicStatus() {
-      
+      body.style.filter = "blur (10px)";
+      overlay.style.zIndex = 5000;
+      overlay.style.opacity = 0.7;
+
      
     }
 
