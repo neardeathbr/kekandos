@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Обратный отсчёт1</title>
+  <title>Обратный отсчёт</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {   
@@ -106,8 +106,9 @@
       height: 100%;
       width: 100%;
       background-color:black;
-      opacity: 0.4;
       z-index: -5000;
+      font-family: Comfortaa, Arial, sans-serif;
+      text-align: center;
     }
   </style>
 
@@ -115,7 +116,7 @@
 
 <body id="id_window" alink="#800080" vlink="#800080" link="#800080">
   <div id="overlay">
-
+<p>Возможность открыть сообщение появиться, когда придет время, а пока, если хочешь, можешь попробовать дойти до секретного послания. Первый этап:</p>
   </div>
  
 <div class="back" id="back" onmousemove="biba();">
@@ -194,7 +195,7 @@
     function musicStatus() {
       back.style.filter = "blur (10px)";
       overlay.style.zIndex = 5000;
-      overlay.style.opacity = 0.7;
+      overlay.style.opacity = 0.8;
 
      
     }
