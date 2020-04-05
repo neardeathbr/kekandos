@@ -13,7 +13,7 @@
     * {
       margin: 0;
 
-      transition: 7s filter ease-out;
+      transition: 5s filter ease-out;
 
 
     }
@@ -72,7 +72,7 @@
     .text {
       position: absolute;
       margin: auto;
-      top: 35vh;
+      top: 45vh;
       z-index: 200;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -87,7 +87,7 @@
     .open_message {
       position: absolute;
       margin: auto;
-      top: 60vh;
+      top: 80vh;
       z-index: 201;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -103,7 +103,7 @@
 </head>
 
 <body id="id_window" alink="#800080" vlink="#800080" link="#800080">
-  <iframe src="/kekandos/audio1.mp3" allow="autoplay"></iframe>
+ 
 <div class="back" id="back" onmousemove="biba();">
     <video id="video" width="100%" height=auto preload autoplay loop muted>
       <source src="/kekandos/video0.mp4" type="video/mp4">
@@ -160,6 +160,7 @@
 
 
     function biba() { 
+      
       if (blured) {
 
         text.style.filter = "blur(0.5px)";
