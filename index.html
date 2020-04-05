@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>countdownn</title>
+  <title>Обратный отсчёт</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
     ::-webkit-scrollbar {   
@@ -52,6 +52,7 @@
     #timer585db2a19c3ae9f25c30d277dfd67259:hover {
       filter: blur(5px);
     }
+    
 
 
 
@@ -147,7 +148,7 @@
     var text = document.getElementById("id_text");
     var open_message = document.getElementById("id_open_message");
     var body = document.getElementById("id_window");
-  
+   
     
    
 
@@ -177,7 +178,21 @@
     };
     function musicStatus() {
       
-
+      $(function(){
+   var docHeight = $(document).height();
+   $("body").append("<div id='overlay'></div>");
+   $("#overlay")
+      .height(docHeight)
+      .css({
+         'opacity' : 0.4,
+         'position': 'absolute',
+         'top': 0,
+         'left': 0,
+         'background-color': 'black',
+         'width': '100%',
+         'z-index': 5000
+      });	
+});
     }
 
 
