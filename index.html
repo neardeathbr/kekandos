@@ -177,7 +177,7 @@
     <a id="open_message_button" href="javascript:startMessage();">&lt;прочитать&gt;</a>
     <p id="warning_text"> Возможность открыть сообщение появиться, когда придет время, а пока, если хочешь, можешь
       попробовать дойти до секретного послания.<br><br>Первый этап: <a
-        href="javascript:readMessage();">https://vk.com/notsolong</a></p>
+        href="javascript:readMessage();">(он не готов (знаешь как сложно придумать простое задание?))</a></p>
     <a id="close_button" href="javascript:goback();">&lt;назад&gt;</a>
   </div>
 
@@ -231,7 +231,11 @@
 
 
 
-
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    location="/kekandos/new/index.html";
+  } else {
+    // код для обычных устройств
+}
 
 
 
