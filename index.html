@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
- 
+
   <title>Обратный отсчёт</title>
   <link rel="icon" type="image/png" href="/kekandos/app.png">
   <style type="text/css">
@@ -13,7 +13,7 @@
 
     * {
       margin: 0;
-     
+
       transition: 1s filter ease-out;
 
 
@@ -60,7 +60,7 @@
 
 
     .html {
-      
+
       overflow-x: hidden;
 
     }
@@ -131,6 +131,8 @@
       transform: translate(-50%, -50%);
       line-height: 15pt;
       font-size: 15pt;
+      visibility: hidden;
+
 
     }
 
@@ -142,14 +144,40 @@
       font-size: 20pt;
       transform: translate(-50%, -50%);
     }
+
+    #ready_text {
+      position: absolute;
+      margin: auto;
+      left: 50%;
+      top: 50vh;
+      transform: translate(-50%, -50%);
+      line-height: 15pt;
+      font-size: 15pt;
+      visibility: hidden;
+
+
+    }
+
+    #open_message_button {
+      position: absolute;
+      margin: auto;
+      left: 50%;
+      top: 60vh;
+      font-size: 20pt;
+      visibility: hidden;
+      transform: translate(-50%, -50%);
+    }
   </style>
 
 </head>
 
 <body id="id_window" alink="#800080" vlink="#800080" link="#800080">
   <div id="overlay">
+    <p id="ready_text"> Время пришло, у тебя есть возможность прочитать письмо...</p>
+    <a id="open_message_button" href="javascript:startMessage();">&lt;прочитать&gt;</a>
     <p id="warning_text"> Возможность открыть сообщение появиться, когда придет время, а пока, если хочешь, можешь
-      попробовать дойти до секретного послания.<br><br>Первый этап: <a target="_blank" href="https://vk.com/notsolong">https://vk.com/notsolong</a></p>
+      попробовать дойти до секретного послания.<br><br>Первый этап: <a
+        href="javascript:readMessage();">https://vk.com/notsolong</a></p>
     <a id="close_button" href="javascript:goback();">&lt;назад&gt;</a>
   </div>
 
@@ -161,7 +189,8 @@
     </video>
     <div class="text" id="id_text">
       <p>
-        It's <a class="ssilka" target="_blank" href="https://github.com/neardeathbr/kekandos/blob/master/index.html">#notsolong</a>
+        It's <a class="ssilka" target="_blank"
+          href="https://github.com/neardeathbr/kekandos/blob/master/index.html">#notsolong</a>
         until that day...
       </p>
     </div>
@@ -188,6 +217,7 @@
 
 
   <script type="text/javascript">
+    var time = true;
     console.log("test");
     var blured = true;
     var audio = document.getElementById("id_audio");
@@ -227,9 +257,19 @@
 
     };
     function musicStatus() {
-      overlay.style.transition = "0.3s opacity linear";
-      overlay.style.zIndex = 1;
-      overlay.style.opacity = 0.9;
+      if (time) {
+        document.getElementById("ready_text").style.visibility = "visible";
+        overlay.style.transition = "0.3s opacity linear";
+        document.getElementById("open_message_button").style.visibility = "visible";
+        overlay.style.zIndex = 1;
+        overlay.style.opacity = 0.9;
+      } else {
+
+        document.getElementById("warning_text").style.visibility = "visible";
+        overlay.style.transition = "0.3s opacity linear";
+        overlay.style.zIndex = 1;
+        overlay.style.opacity = 0.9;
+      }
 
 
 
@@ -243,6 +283,25 @@
 
 
     };
+    function readMessage() {
+      overlay.style.transition = "2s opacity linear";
+      overlay.style.opacity = 1;
+      document.getElementById("warning_text").style.transition = "2s visibility linear, 2s opacity linear";
+      document.getElementById("close_button").style.transition = "2s visibility linear, 2s opacity linear";
+      document.getElementById("warning_text").style.visibility = "hidden";
+      document.getElementById("close_button").style.visibility = "hidden";
+      document.getElementById("warning_text").style.opacity = 0;
+      document.getElementById("close_button").style.opacity = 0;
+
+    }
+    function startMessage() {
+      readMessage();
+      document.getElementById("ready_text").style.transition = "2s visibility linear, 2s opacity linear";
+      document.getElementById("open_message_button").style.transition = "2s visibility linear, 2s opacity linear";
+      document.getElementById("ready_text").style.visibility = "visible";
+      overlay.style.transition = "0.3s opacity linear";
+      document.getElementById("open_message_button").style.visibility = "visible";
+    }
 
 
 
