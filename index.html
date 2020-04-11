@@ -157,6 +157,19 @@
 
 
     }
+    #message_text {
+      position: absolute;
+      margin: auto;
+      left: 50%;
+      top: 50vh;
+      transform: translate(-50%, -50%);
+      line-height: 15pt;
+      font-size: 15pt;
+      visibility: hidden;
+      opacity: 0;
+
+
+    }
 
     #open_message_button {
       position: absolute;
@@ -173,11 +186,10 @@
 
 <body id="id_window" alink="#800080" vlink="#800080" link="#800080">
   <div id="overlay">
+    <p id="message_text">Хоть я и дико сомневаюсь, что ты дошла до этого момента, но зато несправедливо будет сказать, что я не поздравил. День рождение не такой уж крутой праздник на самом деле, я не вижу особой ценности в нем, кроме той, что ты видишь, кто не забывает тебя поздравить, чего лучше иногда и не знать. Ладно, просто поздравляю с этим днем.</p>
     <p id="ready_text"> Время пришло, у тебя есть возможность прочитать письмо...</p>
     <a id="open_message_button" href="javascript:startMessage();">&lt;прочитать&gt;</a>
-    <p id="warning_text"> Возможность открыть сообщение появиться, когда придет время, а пока, если хочешь, можешь
-      попробовать дойти до секретного послания.<br><br>Первый этап: <a
-        href="javascript:readMessage();">(он не готов (знаешь как сложно придумать простое задание?))</a></p>
+    <p id="warning_text"> Возможность открыть сообщение появиться, когда придет время.</p>
     <a id="close_button" href="javascript:goback();">&lt;назад&gt;</a>
   </div>
 
@@ -228,6 +240,8 @@
     var body = document.getElementById("id_window");
     var overlay = document.getElementById("overlay");
     var back = document.getElementById("back");
+    var message_text = document.getElementById("message_text");
+    var d = new Date();
 
 
 
@@ -261,6 +275,9 @@
 
     };
     function musicStatus() {
+      if (d.getDate() == 11){
+        time = true;
+      }
       if (time) {
         document.getElementById("ready_text").style.visibility = "visible";
         overlay.style.transition = "0.3s opacity linear";
@@ -296,16 +313,26 @@
       document.getElementById("close_button").style.visibility = "hidden";
       document.getElementById("warning_text").style.opacity = 0;
       document.getElementById("close_button").style.opacity = 0;
+      
 
     }
     function startMessage() {
       readMessage();
       document.getElementById("ready_text").style.transition = "2s visibility linear, 2s opacity linear";
       document.getElementById("open_message_button").style.transition = "2s visibility linear, 2s opacity linear";
+      message_text.style.transition = "6s opacity linear";
       document.getElementById("ready_text").style.visibility = "visible";
       overlay.style.transition = "0.3s opacity linear";
       document.getElementById("open_message_button").style.visibility = "visible";
+      document.getElementById("open_message_button").style.opacity = "0";
+      document.getElementById("ready_text").style.opacity = "0";
+      message_text.style.visibility = "visible";
+      message_text.style.opacity = "1";
+
     }
+   
+
+    
 
 
 
